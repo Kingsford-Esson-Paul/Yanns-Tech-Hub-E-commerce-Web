@@ -1,0 +1,496 @@
+<style>
+    .product-container {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .header-wrapper {
+      background: #eef2f4;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      padding: 21px 0 71px;
+    }
+    
+    .nav-container {
+      border-radius: 20px;
+      background: #f2f2f2;
+      align-self: center;
+      display: flex;
+      width: 1203px;
+      max-width: 100%;
+      gap: 20px;
+      justify-content: space-between;
+      padding: 21px 68px;
+    }
+    
+    .logo {
+      aspect-ratio: 4.13;
+      object-fit: contain;
+      width: 132px;
+    }
+    
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      color: #000;
+      font: 500 14px 'Open Sans', sans-serif;
+    }
+    
+    .nav-link {
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    .user-actions {
+      display: flex;
+      margin-top: 4px;
+      align-items: start;
+      gap: 30px;
+    }
+    
+    .icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      width: 24px;
+    }
+    
+    .cart-icon {
+      align-self: stretch;
+      width: 27px;
+      height: 27px;
+    }
+    
+    .divider {
+      min-height: 1px;
+      margin-top: 26px;
+      width: 100%;
+      border: 1px solid #d5d5d5;
+    }
+    
+    .breadcrumb {
+      display: flex;
+      width: 460px;
+      max-width: 100%;
+      gap: 12px;
+      color: #000;
+      margin: 9px 0 0 139px;
+      font: 500 15px 'Open Sans', sans-serif;
+    }
+    
+    .breadcrumb-item {
+      align-self: stretch;
+      border-radius: 10px;
+      background: #fff;
+      min-height: 28px;
+      padding: 4px 14px;
+    }
+    
+    .breadcrumb-item.active {
+      font-weight: 700;
+    }
+    
+    .product-details {
+      align-self: end;
+      display: flex;
+      margin-top: 38px;
+      width: 100%;
+      max-width: 1166px;
+      flex-direction: column;
+      align-items: start;
+    }
+    
+    .product-gallery {
+      margin-left: 41px;
+      width: 100%;
+      max-width: 987px;
+    }
+    
+    .gallery-grid {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .main-image {
+      aspect-ratio: 1.06;
+      object-fit: contain;
+      width: 100%;
+      border-radius: 10px;
+    }
+    
+    .thumbnail-grid {
+      display: flex;
+      margin-top: 15px;
+      gap: 13px;
+    }
+    
+    .thumbnail {
+      aspect-ratio: 1.11;
+      object-fit: contain;
+      width: 104px;
+      border-radius: 20px;
+    }
+    
+    .product-info {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .product-title {
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    
+    .rating {
+      display: flex;
+      gap: 10px;
+      font-size: 12px;
+      color: #a5a5a5;
+    }
+    
+    .price {
+      font-size: 25px;
+      font-weight: 700;
+      margin: 7px 0 38px;
+    }
+    
+    .quantity-label {
+      font-weight: 700;
+      margin-bottom: 27px;
+    }
+    
+    .features-list {
+      font-weight: 500;
+    }
+    
+    .feature-item {
+      margin-bottom: 19px;
+    }
+    
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 31px;
+    }
+    
+    .btn {
+      border-radius: 30px;
+      color: #fff;
+      font-weight: 700;
+      padding: 19px;
+      text-align: center;
+      width: 100%;
+    }
+    
+    .btn-primary {
+      background: #0055b6;
+    }
+    
+    .btn-dark {
+      background: #000;
+    }
+    
+    .description-section {
+      margin: 74px 0 0 44px;
+    }
+    
+    .section-title {
+      color: #000;
+      font: 700 25px 'Open Sans', sans-serif;
+      margin-bottom: 20px;
+    }
+    
+    .specs-list {
+      color: #000;
+      font: 500 15px 'Open Sans', sans-serif;
+    }
+    
+    .review-section {
+      margin-top: 58px;
+    }
+    
+    .rating-summary {
+      display: flex;
+      justify-content: space-between;
+      margin: 33px 0;
+    }
+    
+    .rating-stats {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .rating-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .rating-bar {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+    
+    .bar-container {
+      border-radius: 10px;
+      background: #e4e4e4;
+      height: 15px;
+      width: 320px;
+    }
+    
+    .bar-fill {
+      border-radius: 10px;
+      background: #ffc107;
+      height: 100%;
+    }
+    
+    .review-card {
+      border-radius: 20px;
+      background: #fff;
+      border: 1px solid #e4e4e4;
+      padding: 30px 58px;
+      margin-bottom: 20px;
+    }
+    
+    .review-title {
+      font-size: 25px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    
+    .review-content {
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+    
+    .review-meta {
+      color: #000;
+      font-weight: 500;
+    }
+    
+    .footer {
+      background: #000;
+      color: #fff;
+      padding: 73px 70px 40px;
+      margin-top: 42px;
+    }
+    
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      max-width: 655px;
+      margin: 0 auto;
+    }
+    
+    .footer-logo {
+      margin-bottom: 19px;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 33px;
+    }
+    
+    .social-icon {
+      width: 18px;
+      height: 18px;
+    }
+    
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    
+    .footer-heading {
+      color: #dedede;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+    
+    .footer-link {
+      color: #fff;
+      font: 300 12px 'Inter', sans-serif;
+    }
+    
+    .copyright {
+      background: #191919;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      font: 400 10px 'Inter', sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+      .nav-container {
+        padding: 0 20px;
+      }
+      
+      .breadcrumb {
+        margin-left: 10px;
+      }
+      
+      .product-details {
+        max-width: 100%;
+      }
+      
+      .gallery-grid {
+        flex-direction: column;
+      }
+      
+      .product-info {
+        margin-top: 40px;
+      }
+      
+      .description-section {
+        margin-left: 10px;
+      }
+      
+      .review-card {
+        padding: 20px;
+      }
+      
+      .footer {
+        padding: 40px 20px;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+    </style>
+    
+    <div class="product-container">
+      <header class="header-wrapper">
+        <nav class="nav-container" role="navigation" aria-label="Main navigation">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5d962a5648b3a827e7de2589460eeb8b55b5668612978d504a8f5b359527d69c?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="Company Logo" class="logo" />
+          <div class="nav-links">
+            <a href="#" class="nav-link">Daily deals</a>
+            <a href="#" class="nav-link">Shop</a>
+            <a href="#" class="nav-link">Bundle Deals</a>
+            <a href="#" class="nav-link">Support</a>
+          </div>
+          <div class="user-actions">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/caffc333dea08fa9c2427ed2edb1e5f99041c7457e91b72534f7410dabf8dc0f?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="Search" class="icon" />
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/27240010be2edc760824df85c53ca5f2605cf593bb319977564282959336dc16?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="User Account" class="icon" />
+            <button class="cart-icon" aria-label="Shopping Cart"></button>
+          </div>
+        </nav>
+        
+        <div class="divider" role="separator"></div>
+        
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <span class="breadcrumb-item active">yannstechub</span>
+          <span class="breadcrumb-item">Daily deals</span>
+          <span class="breadcrumb-item">Smart Headphones</span>
+        </nav>
+        
+        <div class="divider" role="separator"></div>
+      </header>
+    
+      <main class="product-details">
+        <div class="product-gallery">
+          <div class="gallery-grid">
+            <div class="gallery-main">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5b9cda2af966f9057ec4f0987bf8a0c4edcaec6952eb90d7a30c369fcf3957cc?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="Smart Headphones Main View" class="main-image" />
+              <div class="thumbnail-grid">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/96b9357dc57127237e9a1a1689f34f9ba4880b95f26b81974c40a51de181c653?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="Headphones Thumbnail 1" class="thumbnail" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/c1c3411666f107c4de4296252594b4a1d748d144bdc1b040fd8abb0ff72d360b?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="Headphones Thumbnail 2" class="thumbnail" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/00c1fac203f4de83dedbacaa3c29f7bbbbb28c4f203c59155592ef0293734c1e?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="Headphones Thumbnail 3" class="thumbnail" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ecad0eb31027296403b6c76b8d836f10253d7333226fe37920901553b2e9e4e?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="Headphones Thumbnail 4" class="thumbnail" />
+              </div>
+            </div>
+            
+            <div class="product-info">
+              <h1 class="product-title">Lorem ipsum dolor</h1>
+              <div class="rating">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5d05389f4cec6dd226fa4948dd7647b8772ce41b4391b6dd9579b8d8c1bc0c2c?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="5 Star Rating" class="rating-icon" />
+                <span>5.0 (58 reviews)</span>
+              </div>
+              <div class="price">$ 50.00</div>
+              <label for="quantity" class="quantity-label">Quantity</label>
+              <select id="quantity" class="quantity-select" aria-label="Select quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              
+              <ul class="features-list">
+                <li class="feature-item">Powerful Bass</li>
+                <li class="feature-item">60-hr-Playtime</li>
+                <li class="feature-item">AniFast™ Fast Charging</li>
+                <li class="feature-item">ENC HD Voice in Calls</li>
+              </ul>
+              
+              <div class="action-buttons">
+                <button class="btn btn-primary">Continue Shopping</button>
+                <button class="btn btn-dark">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <section class="description-section" aria-labelledby="description-title">
+          <h2 id="description-title" class="section-title">Description</h2>
+          <ul class="specs-list">
+            <li>BT Version: 5.2</li>
+            <li>BT Range: ≥10m</li>
+            <li>Speaker Diameter: 40mm</li>
+            <li>Playtime: Up to 60 hours</li>
+            <li>Charging Time: 1.5 hours</li>
+            <li>Supported Format: Mic support / Aux in Mode / Type-C</li>
+            <li>Model: OHP-610</li>
+          </ul>
+        </section>
+    
+        <section class="review-section" aria-labelledby="reviews-title">
+          <h2 id="reviews-title" class="section-title">Ratings and Reviews</h2>
+          
+          <div class="rating-summary">
+            <!-- Rating stats and bars here -->
+          </div>
+          
+          <div class="reviews-list">
+            <!-- Review cards here -->
+          </div>
+        </section>
+      </main>
+    
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/58b38722a59cb5a55d6ad5254024b260e064453bb4f08ddea4d8ad5f2997ccb8?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="Company Logo" class="footer-logo" />
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d436ff0fbcfb1a9b6dcecd2472d8ef953547ae30a0e5377f15a88f276df87936?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="" class="social-icon" /></a>
+              <a href="#" aria-label="Twitter"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ddd9a9bab8c155046dd1359a68e581ad46bfc1aa28b9c4b6746e85a67768cf2?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="" class="social-icon" /></a>
+              <a href="#" aria-label="Instagram"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e18aa577ef0b9df8eaa6bb5c17102af976ae9d35ccfefca436b222de69eb7b9?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="" class="social-icon" /></a>
+              <a href="#" aria-label="LinkedIn"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e7481c8793977677f152529b654a02cb36be78ef8aafdeb1f14777818c39ad0?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="" class="social-icon" /></a>
+              <a href="#" aria-label="YouTube"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aac656be81d660e7d6cca7bdfb5c5461e46594bc7f0226c4853fe56cdf8a221d?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="" class="social-icon" /></a>
+              <a href="#" aria-label="Pinterest"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/157e8cb4f49f13aad45a2914dc10f3a7a6bbf237006db244150b722669730d32?apiKey=2c9d54f744c4489ca7176332d686675c&" alt="" class="social-icon" /></a>
+            </div>
+          </div>
+          
+          <div class="footer-links">
+            <h3 class="footer-heading">Company</h3>
+            <a href="#" class="footer-link">About Us</a>
+            <a href="#" class="footer-link">Careers</a>
+          </div>
+          
+          <div class="footer-links">
+            <h3 class="footer-heading">Help</h3>
+            <a href="#" class="footer-link">Legal</a>
+            <a href="#" class="footer-link">FAQs</a>
+            <a href="#" class="footer-link">Contact</a>
+          </div>
+        </div>
+        
+        <div class="copyright">@yannstechhub2025</div>
+      </footer>
+    </div>

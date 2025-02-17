@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Tabs Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background: #f1f1f1;
+        }
+        .tab.active {
+            background: #ddd;
+            font-weight: bold;
+        }
+        .content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: -1px;
+        }
+        .content.active {
+            display: block;
+        }
+        .card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px auto;
+            width: 80%;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
+        }
+        form input, form button {
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-container">
+        <div class="tab active" onclick="openTab(event, 'tab1')">Cards</div>
+        <div class="tab" onclick="openTab(event, 'tab2')">Forms</div>
+    </div>
+    <div id="tab1" class="content active">
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>This is the first card content.</p>
+        </div>
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>This is the second card content.</p>
+        </div>
+    </div>
+    <div id="tab2" class="content">
+        <form>
+            <h2>Form Section</h2>
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Submit</button>
+        </form>
+        <form>
+            <input type="text" placeholder="Enter your username">
+            <input type="password" placeholder="Enter your password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+        function openTab(event, tabId) {
+            let tabs = document.querySelectorAll('.tab');
+            let contents = document.querySelectorAll('.content');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+            
+            event.currentTarget.classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
