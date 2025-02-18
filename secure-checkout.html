@@ -1,189 +1,4 @@
-<form class="checkout-container" aria-labelledby="checkout-title">
-    <header class="header">
-      <div class="header-content">
-        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5d962a5648b3a827e7de2589460eeb8b55b5668612978d504a8f5b359527d69c?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Company Logo" class="logo" />
-        <nav class="main-nav" role="navigation">
-          <ul class="nav-list">
-            <li><a href="#daily" class="nav-link">Daily deals</a></li>
-            <li><a href="#shop" class="nav-link">Shop</a></li>
-            <li><a href="#bundle" class="nav-link">Bundle Deals</a></li>
-            <li><a href="#support" class="nav-link">Support</a></li>
-          </ul>
-        </nav>
-        <div class="user-actions">
-          <button class="icon-button" aria-label="Search">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/caffc333dea08fa9c2427ed2edb1e5f99041c7457e91b72534f7410dabf8dc0f?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="icon" />
-          </button>
-          <button class="icon-button" aria-label="User account">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/27240010be2edc760824df85c53ca5f2605cf593bb319977564282959336dc16?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="icon" />
-          </button>
-          <button class="cart-button" aria-label="Shopping cart">
-            <span class="cart-icon"></span>
-          </button>
-        </div>
-      </div>
-    </header>
-  
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <ul class="breadcrumb-list">
-        <li><a href="/" class="breadcrumb-link">yannstechub</a></li>
-        <li><a href="/daily-deals" class="breadcrumb-link">Daily deals</a></li>
-        <li><a href="/cart" class="breadcrumb-link">Cart</a></li>
-        <li><span class="breadcrumb-current" aria-current="page">Secure Checkout</span></li>
-      </ul>
-    </nav>
-  
-    <main class="checkout-content">
-      <div class="checkout-form">
-        <h1 id="checkout-title" class="form-title">Shipping Address</h1>
-        
-        <div class="form-row">
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" class="form-input" required />
-          </div>
-          <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" class="form-input" required />
-          </div>
-        </div>
-  
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" class="form-input" required />
-        </div>
-  
-        <div class="form-group">
-          <label class="checkbox-label">
-            <input type="checkbox" class="checkbox-input" />
-            Set as default
-          </label>
-        </div>
-  
-        <div class="form-group">
-          <label for="state">State/Province</label>
-          <input type="text" id="state" class="form-input" required />
-        </div>
-  
-        <div class="form-row">
-          <div class="form-group">
-            <label for="city">City</label>
-            <input type="text" id="city" class="form-input" required />
-          </div>
-          <div class="form-group">
-            <label for="district">District</label>
-            <input type="text" id="district" class="form-input" required />
-          </div>
-        </div>
-  
-        <div class="form-group">
-          <label for="address1">Address</label>
-          <input type="text" id="address1" class="form-input" placeholder="Street, Apartment, Suite, etc." required />
-          <span class="helper-text">Detailed street address can help our rider find you quickly.</span>
-        </div>
-  
-        <div class="form-group">
-          <label for="address2">Address 2</label>
-          <input type="text" id="address2" class="form-input" />
-        </div>
-  
-        <div class="form-group">
-          <label for="phone">Phone number</label>
-          <input type="tel" id="phone" class="form-input" required />
-        </div>
-  
-        <button type="submit" class="submit-button">Proceed to checkout</button>
-      </div>
-  
-      <aside class="order-summary">
-        <div class="summary-section">
-          <div class="summary-header">
-            <h2 class="summary-title">My Order Summary</h2>
-            <button class="edit-button">Edit</button>
-          </div>
-  
-          <ul class="product-list">
-            <li class="product-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a3d2d15b23f08d6a7e4a2e6a232f16067819ffa196f0281f853b8b8b5396d9b4?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Product 1" class="product-image" />
-              <div class="product-details">
-                <h3 class="product-name">Lorem ipsum dolor</h3>
-                <p class="product-quantity">Qty: 1</p>
-                <p class="product-price">$50.00</p>
-              </div>
-            </li>
-            <li class="product-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9d8eab4fe28a73835d78dacacb812768449843e65448f1aa79482ad7a0d5e41?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Product 2" class="product-image" />
-              <div class="product-details">
-                <h3 class="product-name">Lorem ipsum dolor</h3>
-                <p class="product-quantity">Qty: 1</p>
-                <p class="product-price">$99.99</p>
-              </div>
-            </li>
-            <li class="product-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4dec0a85ae305f77f0be2bbd7994f06e59650e4d5ff4602c193c0386f8e57c48?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Product 3" class="product-image" />
-              <div class="product-details">
-                <h3 class="product-name">Lorem ipsum dolor</h3>
-                <p class="product-quantity">Qty: 1</p>
-                <p class="product-price">$99.99</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-  
-        <div class="total-section">
-          <div class="total-row">
-            <span>Cart Summary</span>
-            <span>$349.99</span>
-          </div>
-          <div class="total-row">
-            <span>Shipping</span>
-            <span>$5.00</span>
-          </div>
-          <div class="total-row total-final">
-            <span>Total</span>
-            <span>$354.99</span>
-          </div>
-        </div>
-      </aside>
-    </main>
-  
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/14f3f7fdfcd7d34a7edf16c634a21956028e36fb12020a5b5f5bfe6f9d8b238a?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Company Logo" class="footer-logo" />
-          <div class="social-links">
-            <a href="#" aria-label="Facebook"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e4e6c71b5500d63b74c3937dba786fe60e6af53bf2248f1ba7904ce7ceb5a214?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="social-icon" /></a>
-            <a href="#" aria-label="Twitter"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f40816b46499d250d4225f62a3ee7f1136149c95228d96495d89a44fd07e30f2?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="social-icon" /></a>
-            <a href="#" aria-label="Instagram"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/af10cbd31488f4753a3eb4ffb98863bde97877aef3bd2248ddcf290dc0d4a904?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="social-icon" /></a>
-            <a href="#" aria-label="LinkedIn"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e7481c8793977677f152529b654a02cb36be78ef8aafdeb1f14777818c39ad0?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="social-icon" /></a>
-            <a href="#" aria-label="YouTube"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/bebc7882911dc3cffc1aee36018695a0f06a4e295ccc6d2a2cfb4ae74974dcaa?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="social-icon" /></a>
-            <a href="#" aria-label="Pinterest"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/157e8cb4f49f13aad45a2914dc10f3a7a6bbf237006db244150b722669730d32?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="social-icon" /></a>
-          </div>
-        </div>
-  
-        <nav class="footer-nav">
-          <div class="footer-nav-section">
-            <h2 class="footer-nav-title">Company</h2>
-            <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#careers">Careers</a></li>
-            </ul>
-          </div>
-  
-          <div class="footer-nav-section">
-            <h2 class="footer-nav-title">Help</h2>
-            <ul>
-              <li><a href="#legal">Legal</a></li>
-              <li><a href="#faqs">FAQs</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <div class="footer-copyright">@yannstechhub2025</div>
-    </footer>
-  </form>
-  
+
   <style>
   .checkout-container {
     background: #fff;
@@ -530,3 +345,189 @@
     border: 0;
   }
   </style>
+
+<form class="checkout-container" aria-labelledby="checkout-title">
+  <header class="header">
+    <div class="header-content">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/5d962a5648b3a827e7de2589460eeb8b55b5668612978d504a8f5b359527d69c?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Company Logo" class="logo" />
+      <nav class="main-nav" role="navigation">
+        <ul class="nav-list">
+          <li><a href="#daily" class="nav-link">Daily deals</a></li>
+          <li><a href="#shop" class="nav-link">Shop</a></li>
+          <li><a href="#bundle" class="nav-link">Bundle Deals</a></li>
+          <li><a href="#support" class="nav-link">Support</a></li>
+        </ul>
+      </nav>
+      <div class="user-actions">
+        <button class="icon-button" aria-label="Search">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/caffc333dea08fa9c2427ed2edb1e5f99041c7457e91b72534f7410dabf8dc0f?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="icon" />
+        </button>
+        <button class="icon-button" aria-label="User account">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/27240010be2edc760824df85c53ca5f2605cf593bb319977564282959336dc16?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="icon" />
+        </button>
+        <button class="cart-button" aria-label="Shopping cart">
+          <span class="cart-icon"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ul class="breadcrumb-list">
+      <li><a href="/" class="breadcrumb-link">yannstechub</a></li>
+      <li><a href="/daily-deals" class="breadcrumb-link">Daily deals</a></li>
+      <li><a href="/cart" class="breadcrumb-link">Cart</a></li>
+      <li><span class="breadcrumb-current" aria-current="page">Secure Checkout</span></li>
+    </ul>
+  </nav>
+
+  <main class="checkout-content">
+    <div class="checkout-form">
+      <h1 id="checkout-title" class="form-title">Shipping Address</h1>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" class="form-input" required />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" class="form-input" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" class="form-input" required />
+      </div>
+
+      <div class="form-group">
+        <label class="checkbox-label">
+          <input type="checkbox" class="checkbox-input" />
+          Set as default
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State/Province</label>
+        <input type="text" id="state" class="form-input" required />
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" class="form-input" required />
+        </div>
+        <div class="form-group">
+          <label for="district">District</label>
+          <input type="text" id="district" class="form-input" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="address1">Address</label>
+        <input type="text" id="address1" class="form-input" placeholder="Street, Apartment, Suite, etc." required />
+        <span class="helper-text">Detailed street address can help our rider find you quickly.</span>
+      </div>
+
+      <div class="form-group">
+        <label for="address2">Address 2</label>
+        <input type="text" id="address2" class="form-input" />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" class="form-input" required />
+      </div>
+
+      <button type="submit" class="submit-button">Proceed to checkout</button>
+    </div>
+
+    <aside class="order-summary">
+      <div class="summary-section">
+        <div class="summary-header">
+          <h2 class="summary-title">My Order Summary</h2>
+          <button class="edit-button">Edit</button>
+        </div>
+
+        <ul class="product-list">
+          <li class="product-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a3d2d15b23f08d6a7e4a2e6a232f16067819ffa196f0281f853b8b8b5396d9b4?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Product 1" class="product-image" />
+            <div class="product-details">
+              <h3 class="product-name">Lorem ipsum dolor</h3>
+              <p class="product-quantity">Qty: 1</p>
+              <p class="product-price">$50.00</p>
+            </div>
+          </li>
+          <li class="product-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9d8eab4fe28a73835d78dacacb812768449843e65448f1aa79482ad7a0d5e41?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Product 2" class="product-image" />
+            <div class="product-details">
+              <h3 class="product-name">Lorem ipsum dolor</h3>
+              <p class="product-quantity">Qty: 1</p>
+              <p class="product-price">$99.99</p>
+            </div>
+          </li>
+          <li class="product-item">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4dec0a85ae305f77f0be2bbd7994f06e59650e4d5ff4602c193c0386f8e57c48?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Product 3" class="product-image" />
+            <div class="product-details">
+              <h3 class="product-name">Lorem ipsum dolor</h3>
+              <p class="product-quantity">Qty: 1</p>
+              <p class="product-price">$99.99</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="total-section">
+        <div class="total-row">
+          <span>Cart Summary</span>
+          <span>$349.99</span>
+        </div>
+        <div class="total-row">
+          <span>Shipping</span>
+          <span>$5.00</span>
+        </div>
+        <div class="total-row total-final">
+          <span>Total</span>
+          <span>$354.99</span>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/14f3f7fdfcd7d34a7edf16c634a21956028e36fb12020a5b5f5bfe6f9d8b238a?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Company Logo" class="footer-logo" />
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e4e6c71b5500d63b74c3937dba786fe60e6af53bf2248f1ba7904ce7ceb5a214?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="social-icon" /></a>
+          <a href="#" aria-label="Twitter"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f40816b46499d250d4225f62a3ee7f1136149c95228d96495d89a44fd07e30f2?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="social-icon" /></a>
+          <a href="#" aria-label="Instagram"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/af10cbd31488f4753a3eb4ffb98863bde97877aef3bd2248ddcf290dc0d4a904?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="social-icon" /></a>
+          <a href="#" aria-label="LinkedIn"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e7481c8793977677f152529b654a02cb36be78ef8aafdeb1f14777818c39ad0?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="social-icon" /></a>
+          <a href="#" aria-label="YouTube"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/bebc7882911dc3cffc1aee36018695a0f06a4e295ccc6d2a2cfb4ae74974dcaa?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="social-icon" /></a>
+          <a href="#" aria-label="Pinterest"><img src="https://cdn.builder.io/api/v1/image/assets/TEMP/157e8cb4f49f13aad45a2914dc10f3a7a6bbf237006db244150b722669730d32?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="" class="social-icon" /></a>
+        </div>
+      </div>
+
+      <nav class="footer-nav">
+        <div class="footer-nav-section">
+          <h2 class="footer-nav-title">Company</h2>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#careers">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-section">
+          <h2 class="footer-nav-title">Help</h2>
+          <ul>
+            <li><a href="#legal">Legal</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-copyright">@yannstechhub2025</div>
+  </footer>
+</form>
