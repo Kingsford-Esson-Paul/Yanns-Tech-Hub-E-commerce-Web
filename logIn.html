@@ -3,16 +3,27 @@
     text-decoration: none;
   }
     .login-container {
-  background-color: #fff;
+      background-color: #eef2f4;
+      align-items: center;
+      justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+
+
 }
 
 .login-wrapper {
   background-color: #eef2f4;
   display: flex;
   width: 100%;
+  min-height: 100vh;
   padding: 21px 38px 155px;
   flex-direction: column;
   align-items: stretch;
+
   color: #000;
 }
 
@@ -21,6 +32,7 @@
   background-color: #eef2f4;
   display: flex;
   width: 100%;
+  align-self: center;
   flex-direction: column;
   align-items: center;
   padding: 21px 0 0px;
@@ -87,8 +99,9 @@
 }
 .form{
   background-color: #eef2f4;
-  display: flex;
+  display: flex; 
   flex-direction: column;
+  width: 100%;
   align-self: center;
   align-items: center;
   justify-content: center;
@@ -101,17 +114,20 @@
   background-color: #fff;
   align-self: center;
   margin: 10%;
-  width: 455px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 30%;
   padding: 55px;
 }
-@media (max-width: 800px) {
+@media (max-width: 991px) {
   .login-form-container {
     margin: 15%;
+    max-width: 60%;
   }
   .form{
     padding-bottom: 10%;
-    height: 70vh;
+    align-self: center;
+    margin-top: 10%;
+    /* margin-top: 40%;  */
   }
 } 
 
@@ -237,7 +253,7 @@
     background-color: #000;
     padding-top: 10px;
     width: 100%;
-    margin-bottom: 0%;
+    margin-top: auto;
   }
   
   .footer-content {
@@ -448,6 +464,6 @@
     </div>
     <div class="copyright">@yannstechhub2025</div>
   </footer>
-    </div>
   </div>
+
   
