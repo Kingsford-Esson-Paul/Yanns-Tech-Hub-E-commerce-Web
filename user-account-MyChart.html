@@ -1,4 +1,11 @@
 <style>
+   :root {
+      --color-white: rgba(255, 255, 255, 1);
+      --color-light-gray: rgba(238, 242, 244, 1);
+      --color-dark-gray: rgba(213, 213, 213, 1);
+      --color-primary: rgba(0, 85, 182, 1);
+      --color-black: rgba(0, 0, 0, 1);
+    }
     .my-chart {
   background-color: #fff;
 }
@@ -170,96 +177,236 @@
   justify-content: space-between;
 }
 
-.header-items {
-  display: flex;
-  align-items: stretch;
-  gap: 76px;
-}
+.cart-summary {
+      display: flex;
+      width: 100%;
+      max-width: 75%;
+      gap: 25px;
+      font-size: 15px;
+      font-weight: 500;
+      white-space: nowrap;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 41px 0 0 50px;
+    }
+  
+    @media (max-width: 991px) {
+      .cart-summary {
+        margin-top: 40px;
+        white-space: initial;
+        align-self: center;
+        max-width: 50%;
+        margin: 41px 0 0 0px;
+      }
+    }
+  
+    .cart-summary-column {
+      display: flex;
+      gap: 40px 120px;
+    }
+  
+    @media (max-width: 991px) {
+      .cart-summary-column {
+        white-space: initial;
+      }
+    }
+  
+    .cart-item {
+      border-radius: 10px;
+      background-color: var(--color-white);
+      display: flex;
+      margin-top: 18px;
+      width: 100%;
+      align-items: center;
+      gap: 20px;
+      font-size: 15px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 15px 0px;
+      
+    }
+  
+    @media (max-width: 991px) {
+      .cart-item {
+        max-width: 70%;
+        /* padding: 0 20px; */
+        align-self: center;
+      }
+    }
+  
+    .cart-item-content {
+      align-self: stretch;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      padding-left: 30px;
+    }
 
-.product-card {
-  border-radius: 8px;
-  background-color: #fff;
-  display: flex;
-  margin-top: 10px;
-  min-height: 90px;
-  padding: 12px 45px;
-  align-items: center;
-  gap: 78px;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
+    @media (max-width: 1200px) {
+      .cart-item-content {
+      flex-direction: column;
+    }
+    }
+  
+    .product-image {
+      aspect-ratio: 1.06;
+      object-fit: contain;
+      object-position: center;
+      width: 89px;
+      border-radius: 10px;
+    }
+  
+    .product-description {
+      flex-basis: auto;
+      margin: auto 0;
+    }
+  
+    .product-details {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      gap: 40px 74px;
+      white-space: nowrap;
+      margin: auto 0;
+    }
+  
+    @media (max-width: 991px) {
+      .product-details {
+        white-space: initial;
+      }
+    }
+  
+    .product-price, .product-total-price {
+      align-self: stretch;
+      margin: auto 0;
+    }
+  
+    .quantity-selector {
+      border-radius: 10px;
+      align-self: stretch;
+      display: flex;
+      /* width: 140px; */
+      text-align: center;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      /* height: 47px; */
+      padding: 10px 20px;
+      border: 1px solid rgba(228, 228, 228, 1);
+    }
+    .quantity-btn {
+        padding: 5px 10px;
+        font-size: 18px;
+        border: none;
+        color: #000;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
 
-.product-image {
-  width: 70px;
-  border-radius: 8px;
-  object-fit: contain;
-}
-
-.product-title {
-  color: #000;
-  font-size: 12px;
-  font-family:
-    "Open Sans",
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-weight: 700;
-  margin: auto 0;
-  flex: 1;
-  width: 111px;
-}
-
-.product-price,
-.product-total {
-  color: #000;
-  font-size: 12px;
-  font-family:
-    "Open Sans",
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
-  font-weight: 700;
-  margin: auto 0;
-  flex: 1;
-  width: 40px;
-}
-
-.quantity-control {
-  position: relative;
-  width: 111px;
-  height: 37px;
-  margin: auto 0;
-}
-
-.quantity-bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.quantity-input {
-  position: relative;
-  border-radius: 8px;
-  border: 1px solid #e4e4e4;
-  height: 100%;
-}
-
-.delete-btn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.delete-icon {
-  width: 15px;
-  height: 15px;
-  object-fit: contain;
-}
+    .quantity-btn:hover {
+        background-color: black;
+        color: #fff;
+    }
+  
+    .remove-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 19px;
+      align-self: stretch;
+      margin: auto 0;
+      padding-right: 30px;
+    }
+    .subTotal{
+      align-self: end;
+    } 
+    @media (max-width: 991px) {
+    .subTotal{
+      align-self: center;
+      /* margin-right: 10%; */
+    }
+  }
+  
+    .subtotal-section {
+      align-self: end;
+      margin-top: 36px;
+      width: 551px;
+      max-width: 100%;
+      height: 1px;
+      border: 1px solid var(--color-dark-gray);
+    }
+  
+    .subtotal-container {
+      align-self: end;
+      display: flex;
+      width: 324px;
+      max-width: 100%;
+      gap: 20px;
+      justify-content: space-between;
+      margin: 23px 152px 0 0;
+    }
+  
+    @media (max-width: 991px) {
+      .subtotal-container {
+        margin-right: 10px;
+      }
+    }
+  
+    .subtotal-label {
+      font-size: 15px;
+      align-self: start;
+      margin-top: 11px;
+    }
+  
+    .subtotal-amount {
+      font-size: 25px;
+    }
+  
+    .checkout-divider {
+      align-self: end;
+      margin-top: 32px;
+      width: 551px;
+      max-width: 100%;
+      height: 1px;
+      border: 1px solid var(--color-dark-gray);
+    }
+  
+    .tax-shipping-info {
+      font-size: 15px;
+      font-weight: 500;
+      align-self: end;
+      margin: 10px 127px 0 0;
+    }
+  
+    @media (max-width: 991px) {
+      .tax-shipping-info {
+        margin-right: 10px;
+      }
+    }
+  
+    .checkout-button {
+      align-self: end;
+      border-radius: 30px;
+      background-color: var(--color-primary);
+      margin-top: 32px;
+      min-height: 7px;
+      gap: 10px;
+      text-align: center;
+      font-size: 15px;
+      color: var(--color-white);
+      padding: 19px 150px;
+    }
+  
+    @media (max-width: 991px) {
+      .checkout-button {
+        margin-right: 10px;
+        padding: 15px 20px;
+        
+      }
+    }
+  
 
 .site-footer {
   background-color: #000;
@@ -430,101 +577,75 @@
         </aside>
   
         <section class="products-section">
-          <header class="products-header">
-            <span class="header-item">Product</span>
-            <div class="header-items">
-              <span class="header-item">Price</span>
-              <span class="header-item">Quantity</span>
-              <span class="header-item">Total</span>
+          <div class="cart-summary">
+            <div>Product</div>
+            <div class="cart-summary-column">
+              <div>Price</div>
+              <div>Quantity</div>
+              <div>Total</div>
             </div>
-          </header>
+          </div>
+          <div class="cart-item">
+            <div class="cart-item-content">
+              <img loading="lazy" src="imgs/Rectangle 62.png" class="product-image" alt="Product 1 image" />
+              <div class="product-description">Lorem ipsum dolor</div>
+            </div>
+            <div class="product-details">
+              <div class="product-price">$50.00</div>
+              <div class="quantity-selector">
+                <button class="quantity-btn" >-</button>
+                <span id="quantity">1</span>
+                <button class="quantity-btn">+</button>
+              </div>
+              <div class="product-total-price">$50.00</div>
+            </div>
+            <img loading="lazy" src="imgs/close.png" class="remove-icon" alt="Remove item icon" />
+          </div>
+          <div class="cart-item">
+            <div class="cart-item-content">
+              <img loading="lazy" src="imgs/Rectangle 62 (4).png" class="product-image" alt="Product 2 image" />
+              <div class="product-description">Lorem ipsum dolor</div>
+            </div>
+            <div class="product-details">
+              <div class="product-price">$99.99</div>
+              <div class="quantity-selector">
+                <button class="quantity-btn" >-</button>
+                <span id="quantity">1</span>
+                <button class="quantity-btn">+</button>
+              </div>
+              <div class="product-total-price">$99.99</div>
+            </div>
+            <img loading="lazy" src="imgs/close.png" class="remove-icon" alt="Remove item icon" />
+          </div>
+          <div class="cart-item">
+            <div class="cart-item-content">
+              <img loading="lazy" src="imgs/asi.png" class="product-image" alt="Product 3 image" />
+              <div class="product-description">Lorem ipsum dolor</div>
+            </div>
+            <div class="product-details">
+              <div class="product-price">$100.00</div>
+              <div class="quantity-selector">
+                <button class="quantity-btn" >-</button>
+                <span id="quantity">1</span>
+                <button class="quantity-btn">+</button>
+              </div>
+              <div class="product-total-price">$200.00</div>
+            </div>
+            <img loading="lazy" src="imgs/close.png" class="remove-icon" alt="Remove item icon" />
   
-          <article class="product-card">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/71b516e36e0981887a40bbbb2929b412749c54e198a40cfaf5266123ed552885?placeholderIfAbsent=true&apiKey=e13307e2352343dd9e1a467ee55b8e09"
-              class="product-image"
-              alt="Product 1"
-            />
-            <h3 class="product-title">Lorem ipsum dolor</h3>
-            <span class="product-price">$50.00</span>
-            <div class="quantity-control">
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c89eac24d07bd9670c62150e6af04284930315bdeb3faa0aaa634129413a7b1?placeholderIfAbsent=true&apiKey=e13307e2352343dd9e1a467ee55b8e09"
-                class="quantity-bg"
-                alt="Quantity background"
-              />
-              <div class="quantity-input"></div>
+          </div>
+          <div class="subTotal">
+            <div class="subtotal-section"></div>
+            <div class="subtotal-container">
+              <div class="subtotal-label">Subtotal</div>
+              <div class="subtotal-amount">$349.99</div>
             </div>
-            <span class="product-total">$50.00</span>
-            <button class="delete-btn">
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/d8aedce97843787713a44de94c0e18dc00b4f583b65230aabe02a651923a082e?placeholderIfAbsent=true&apiKey=e13307e2352343dd9e1a467ee55b8e09"
-                class="delete-icon"
-                alt="Delete"
-              />
-            </button>
-          </article>
-  
-          <article class="product-card">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/e5cc8773927f0ec91625126b3145852ae8c1ab3de99c20a80961c2f8181304a5?placeholderIfAbsent=true&apiKey=e13307e2352343dd9e1a467ee55b8e09"
-              class="product-image"
-              alt="Product 2"
-            />
-            <h3 class="product-title">Lorem ipsum dolor</h3>
-            <span class="product-price">$99.99</span>
-            <div class="quantity-control">
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/ddc313648ad290cac2cc7572712f0a1b7350a7812f049481b6008ef321cb2cdf?placeholderIfAbsent=true&apiKey=e13307e2352343dd9e1a467ee55b8e09"
-                class="quantity-bg"
-                alt="Quantity background"
-              />
-              <div class="quantity-input"></div>
-            </div>
-            <span class="product-total">$99.99</span>
-            <button class="delete-btn">
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c3e16ee77d25230f1341c443a948434c5396e05d87393143d2a71246cb719918?placeholderIfAbsent=true&apiKey=e13307e2352343dd9e1a467ee55b8e09"
-                class="delete-icon"
-                alt="Delete"
-              />
-            </button>
-          </article>
-  
-          <article class="product-card">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/cb1ead64569f777c7a1b181712e0f8ccc25c7c40b85ff1a68d7baa6fa26162e1?placeholderIfAbsent=true&apiKey=e13307e2352343dd9e1a467ee55b8e09"
-              class="product-image"
-              alt="Product 3"
-            />
-            <h3 class="product-title">Lorem ipsum dolor</h3>
-            <span class="product-price">$100.00</span>
-            <div class="quantity-control">
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/c769eac5229555d68cb6eb49012febe1c00829525212099f3a468e1ec05f9aec?placeholderIfAbsent=true&apiKey=e13307e2352343dd9e1a467ee55b8e09"
-                class="quantity-bg"
-                alt="Quantity background"
-              />
-              <div class="quantity-input"></div>
-            </div>
-            <span class="product-total">$200.00</span>
-            <button class="delete-btn">
-              <img
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c7b389371d53d31800907ce1e3f5408dfc982efafdf6263c03540f405281503?placeholderIfAbsent=true&apiKey=e13307e2352343dd9e1a467ee55b8e09"
-                class="delete-icon"
-                alt="Delete"
-              />
-            </button>
-          </article>
+            <div class="checkout-divider"></div>
+            <div class="tax-shipping-info">Tax included and shipping calculated at checkout</div>
+            <a href="payement-mobile.html">
+              <div class="checkout-button" tabindex="0" role="button">Proceed to checkout</div>
+            </a>
+          </div>
         </section>
       </main>
     </div>

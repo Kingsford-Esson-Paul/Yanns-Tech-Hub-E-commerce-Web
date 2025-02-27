@@ -5,37 +5,32 @@
       flex-direction: column;
     }
     
-    .main-wrapper {
+    .main-content {
       background-color: #eef2f4;
       display: flex;
       width: 100%;
       flex-direction: column;
-      padding: 21px 0 73px;
+      align-items: center;
+      padding: 21px 0 179px;
     }
+
+
+    /*------------------Header Style-------------------  */
     
-    @media (max-width: 991px) {
-      .main-wrapper {
-        max-width: 100%;
-      }
-    }
-    
-    .header-nav {
+    .header-section {
+      position: fixed;
       border-radius: 20px;
       background-color: #f2f2f2;
-      align-self: center;
       display: flex;
-      width: 1203px;
-      max-width: 100%;
+      /* width: 1203px; */
+      width: 70%;
+      overflow: hidden;
       gap: 20px;
       justify-content: space-between;
       padding: 21px 68px;
-    }
-    
-    @media (max-width: 991px) {
-      .header-nav {
-        padding: 0 20px;
-      }
-    }
+      box-shadow: 1px 5px 9px 3px rgba(0, 0, 0, 0.147);
+      z-index: 1000;
+    } 
     
     .logo {
       aspect-ratio: 4.13;
@@ -45,7 +40,7 @@
       max-width: 100%;
     }
     
-    .nav-links {
+    .nav-buttons {
       display: flex;
       align-items: center;
       gap: 30px;
@@ -58,6 +53,9 @@
     .nav-link {
       align-self: stretch;
       margin: auto 0;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
     }
     
     .user-actions {
@@ -74,56 +72,122 @@
       object-position: center;
       width: 24px;
     }
-    
-    .cart-icon {
-      align-self: stretch;
-      display: flex;
-      width: 27px;
-      height: 27px;
+    .cart-badge{
+      position: absolute;
+      top: 15px;
+      right: 60px;
+      background: red;
+      color: white;
+      font-size: 14px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      display: none;
+      z-index: 100;
     }
     
+    .divider-top {
+      align-self: stretch;
+      min-height: 0px;
+      margin-top: 100px;
+      width: 99.9%;
+      border: 1px solid #d5d5d5;
+    }
     .divider {
-      min-height: 1px;
-      margin-top: 26px;
-      width: 100%;
+      align-self: stretch;
+      min-height: 0px;
+      margin-top: 10px;
+      width: 99.9%;
       border: 1px solid #d5d5d5;
     }
     
-    .breadcrumb {
+    .breadcrumb-sort {
       display: flex;
-      width: 507px;
-      max-width: 100%;
+      width: 100%;
+      max-width: 70%;
+      gap: 2px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 9px 0 0 0px;
+    }
+    @media (max-width: 991px) {
+    .breadcrumb-sort {
+      width: 70%;
+      justify-content: center;
+      gap: 2rem;
+  }
+  }
+    
+    .breadcrumb {
+      align-self: start;
+      display: flex;
       gap: 12px;
       color: #000;
-      flex-wrap: wrap;
-      margin: 9px 0 0 139px;
-      font: 500 15px Open Sans, sans-serif;
+      font: 15px Open Sans, sans-serif;
     }
     
     .breadcrumb-item {
       align-self: stretch;
       border-radius: 10px;
       background-color: #fff;
-      min-height: 28px;
+      /* min-height: 28px; */
+      gap: 10px;
       padding: 4px 14px;
     }
-    
-    .breadcrumb-home {
-      font-weight: 700;
+    .breadcrumb-item.y{
+      font: 700 15px Open Sans, sans-serif;
     }
+    
+    .sort-container {
+  display: flex;
+  gap: 5px;
+  }
+
+  .sort-label {
+  color: #000;
+  flex-grow: 1;
+  margin: auto 0;
+  font: 500 15px Open Sans, sans-serif;
+  }
+
+  .sort-Select {
+    border-radius: 10px;
+    background-color: #fff;
+    align-self: stretch;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 50px;
+    border: 1px solid #e4e4e4;
+  }
+  select{
+  padding: 4px 30px;
+  border: none;
+  cursor: pointer;
+  }
+
+  @media (max-width: 991px) {
+  .sort-select {
+    padding-left: 20px;
+  }
+  }
     
     .checkout-content {
       display: flex;
-      margin-top: 38px;
-      width: 100%;
-      flex-direction: column;
-      padding: 0 39px 0 80px;
+      gap: 20px;
+      align-items: start;
+      max-width: 70%;
+      margin: 38px auto;
+      padding: 0 39px;
     }
     
     @media (max-width: 991px) {
       .checkout-content {
-        max-width: 100%;
-        padding: 0 20px;
+        flex-direction: column;
+      padding: 0 20px;
       }
     }
     
@@ -144,7 +208,7 @@
       display: flex;
       flex-direction: column;
       line-height: normal;
-      width: 64%;
+      width: 80%;
       margin-left: 0;
     }
     
@@ -156,7 +220,6 @@
     
     .shipping-details {
       display: flex;
-      margin-top: 5px;
       width: 100%;
       flex-direction: column;
       align-items: start;
@@ -180,7 +243,7 @@
       font-size: 15px;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 20px 26px 52px;
+      padding: 49px 80px 77px 22px;
       border: 1px solid #e4e4e4;
     }
     
@@ -218,14 +281,14 @@
     .method-card {
       border-radius: 20px;
       background-color: #fff;
-      align-self: stretch;
       display: flex;
-      margin-top: 18px;
-      gap: 10px;
-      font-size: 15px;
-      font-weight: 700;
-      flex-wrap: wrap;
-      padding: 30px;
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+      color: #000;
+      margin: 0 auto;
+      padding: 49px 80px 77px 22px;
+      font: 700 15px Open Sans, sans-serif;
       border: 1px solid #e4e4e4;
     }
     
@@ -254,63 +317,104 @@
     }
     
     .order-summary {
-      border-radius: 10px;
-      background-color: #fff;
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      color: #000;
-      margin: 0 auto;
-      padding: 30px 22px 57px;
-      font: 500 15px Open Sans, sans-serif;
-      border: 1px solid #e4e4e4;
+    flex: 0 0 38%;
+  }
+  
+  .summary-section {
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    padding: 30px 22px;
+    margin-top: 18%;
+  }
+  
+  .summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .summary-title {
+    font: 700 15px 'Open Sans', sans-serif;
+    margin: 0;
+  }
+  
+  .edit-button {
+    background: none;
+    border: none;
+    color: #000;
+    font: 700 15px 'Open Sans', sans-serif;
+    cursor: pointer;
+  }
+  
+  .product-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  @media (max-width: 991px) {
+    .product-list{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
     }
-    
-    .summary-header {
-      align-self: center;
-      display: flex;
-      width: 336px;
-      max-width: 100%;
-      gap: 20px;
-      font-weight: 700;
-      justify-content: space-between;
+    .summary-section {
+      margin-top: 5%;
     }
-    
-    .product-item {
-      align-self: start;
-      display: flex;
-      gap: 15px;
-      margin: 30px 0 0 11px;
-    }
-    
-    .product-image {
-      aspect-ratio: 1.06;
-      object-fit: contain;
-      object-position: center;
-      width: 89px;
-      border-radius: 10px;
-    }
-    
-    .product-details {
-      align-self: start;
-      display: flex;
-      margin-top: 5px;
-      flex-direction: column;
-      align-items: start;
-    }
-    
-    .product-name {
-      font-weight: 700;
-      align-self: stretch;
-    }
-    
-    .product-quantity {
-      margin-top: 9px;
-    }
-    
-    .product-price {
-      margin-top: 11px;
-    }
+  }
+  
+  .product-item {
+    display: flex;
+    gap: 15px;
+    padding: 20px 11px;
+    border-bottom: 1px solid #d5d5d5;
+  }
+  
+  .product-image {
+    width: 89px;
+    height: 84px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .product-details {
+    flex: 1;
+  }
+  
+  .product-name {
+    font: 700 15px 'Open Sans', sans-serif;
+    margin: 0 0 9px;
+  }
+  
+  .product-quantity {
+    margin: 0 0 11px;
+  }
+  
+  .product-price {
+    margin: 0;
+  }
+  
+  .total-section {
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 10px;
+    margin-top: 28px;
+    padding: 28px 41px;
+  }
+  
+  .total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+    font: 500 15px 'Open Sans', sans-serif;
+  }
+  
+  .total-final {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 35px;
+    margin-bottom: 0;
+  }
     
     .item-divider {
       margin-top: 17px;
@@ -378,123 +482,156 @@
       min-height: 57px;
       gap: 10px;
       color: #fff;
-      margin: 36px 0 0 149px;
+      margin: 36px 0 0 0px;
       padding: 19px 150px;
       font: 700 15px Open Sans, sans-serif;
     }
     
     .footer {
-      background-color: #000;
-      display: flex;
-      width: 100%;
-      padding-top: 10px;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    
-    .footer-content {
-      background-color: #000;
-      display: flex;
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
-      padding: 73px 70px 40px;
-    }
-    
-    .footer-grid {
-      display: flex;
-      width: 655px;
+    background-color: #000;
+    padding-top: 10px;
+    width: 100%;
+    margin-bottom: 0%;
+  }
+  
+  .footer-content {
+    padding: 73px 70px 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer-sections {
+    display: flex;
+    flex-direction: row;
+    width: 655px;
+    max-width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  .footer-logo-social {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .social-icons {
+    display: flex;
+    margin-top: 19px;
+    gap: 33px;
+  }
+  
+  .social-icon {
+    width: 18px;
+    aspect-ratio: 1;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .footer-heading {
+    color: #dedede;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: Inter, sans-serif;
+  }
+  
+  .footer-link {
+    color: #fff;
+    font: 300 12px Inter, sans-serif;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover,
+  .footer-link:focus {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    background-color: #191919;
+    color: #fff;
+    text-align: center;
+    padding: 7px 70px 13px;
+    font: 400 10px Inter, sans-serif;
+  }
+  
+  @media (max-width: 991px) {
+    .main-content {
       max-width: 100%;
-      align-items: start;
-      gap: 20px;
+      padding-bottom: 100px;
+    }
+  
+    .header-section {
+      padding: 0 20px;
+    }
+  
+    .breadcrumb-sort {
+      max-width: 100%;
+    }
+  
+    .footer-content {
+      padding: 40px 20px;
+    }
+  
+    .footer-sections {
       flex-wrap: wrap;
-      justify-content: space-between;
+      align-items: start;
+      text-align: start;
+      gap: 5rem;
+      justify-content: center;
     }
-    
-    .footer-logo {
-      display: flex;
-      flex-direction: column;
-    }
-    
+  
     .social-icons {
-      display: flex;
-      margin-top: 19px;
-      align-items: start;
-      gap: 33px;
-      justify-content: start;
+      justify-content: center;
     }
-    
-    .social-icon {
-      aspect-ratio: 1;
-      object-fit: contain;
-      object-position: center;
-      width: 18px;
-    }
-    
-    .footer-links {
-      display: flex;
-      flex-direction: column;
-      align-items: start;
-      color: #fff;
-      font: 300 12px Inter, sans-serif;
-    }
-    
-    .footer-heading {
-      color: #dedede;
-      font-size: 17px;
-      font-weight: 700;
-      align-self: stretch;
-    }
-    
-    .footer-link {
-      margin-top: 25px;
-    }
-    
+  
     .copyright {
-      background-color: #191919;
-      margin-top: 18px;
-      width: 100%;
-      color: #fff;
-      text-align: center;
-      padding: 7px 70px 13px;
-      font: 400 10px Inter, sans-serif;
+      padding: 7px 20px;
     }
-    
-    @media (max-width: 991px) {
-      .copyright {
-        max-width: 100%;
-        padding: 0 20px;
-      }
-    }
+  }
     </style>
     
     <div class="checkout-container">
-      <div class="main-wrapper">
-        <nav class="header-nav" role="navigation">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/5d962a5648b3a827e7de2589460eeb8b55b5668612978d504a8f5b359527d69c?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="logo" alt="Company Logo"/>
-          <div class="nav-links">
-            <a href="#" class="nav-link">Daily deals</a>
-            <a href="#" class="nav-link">Shop</a>
-            <a href="#" class="nav-link">Bundle Deals</a>
-            <a href="#" class="nav-link">Support</a>
-          </div>
+      <div class="main-content">
+        <header class="header-section">
+          <img src="imgs/Logo.png" alt="YannsTechHub Logo" class="logo" />
+          <nav class="nav-buttons">
+            <a href="daily-deals-section.html" class="nav-link">Daily deals</a>
+            <a href="shop-section.html" class="nav-link">Shop</a>
+            <a href="bundle-deals.html" class="nav-link">Bundle Deals</a>
+            <a href="#support" class="nav-link">Support</a>
+          </nav>
           <div class="user-actions">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/caffc333dea08fa9c2427ed2edb1e5f99041c7457e91b72534f7410dabf8dc0f?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="action-icon" alt="Search"/>
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/27240010be2edc760824df85c53ca5f2605cf593bb319977564282959336dc16?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="action-icon" alt="User Account"/>
-            <div class="cart-icon" role="button" aria-label="Shopping Cart"></div>
+            <img src="imgs/Search - 7.png" alt="Search" class="action-icon" />
+            <img src="imgs/Profile - 3.png" alt="User Account" class="action-icon" />
+            <a href="your-cart.html">
+              <img src="imgs/Buy - 6 (1).png" alt="Shopping Cart" class="action-icon" />
+            </a>
           </div>
-        </nav>
-        
-        <div class="divider" role="separator"></div>
-        
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="#" class="breadcrumb-item breadcrumb-home">yannstechub</a>
-          <a href="#" class="breadcrumb-item">Daily deals</a>
-          <a href="#" class="breadcrumb-item">Cart</a>
-          <span class="breadcrumb-item" aria-current="page">Secure Checkout</span>
-        </nav>
-        
-        <div class="divider" role="separator"></div>
+        </header>
+    
+        <div class="divider-top"></div>
+    
+        <div class="breadcrumb-sort">
+          <div class="breadcrumb">
+            <span class="breadcrumb-item y">yannstechub</span>
+            <span class="breadcrumb-item">/ Daily deals</span>
+          </div>
+          <div class="sort-container">
+            <label for="sortSelect" class="sort-label">Sort by</label>
+              <select class="sort-Select" id="sortSelect" aria-label="Sort products">
+                <option value="">Recommended</option>
+                <option value="">Best Sellers</option>
+                <option value="">Low Price</option>
+                <option value="">High Price</option>
+                <option value="">Reviews</option>
+              </select>
+          </div>
+        </div>
+    
+        <div class="divider"></div>
         
         <main class="checkout-content">
           <div class="content-grid">
@@ -521,136 +658,144 @@
                 </div>
                 
                 <h2 class="payment-method">Payment Method</h2>
+                <div class="payment-column">
+                  <div class="payment-option">
+                    <input type="radio" class="radio-button" role="radio" aria-checked="false">
+                    <p class="option-label">Pay on Delivery<br><span>Pay Mobile Money or in cash on Delivery/Pickup</span></p>
+                  </div>
+                  
+                  <h3 class="mobile-money-section">Mobile Money</h3>
+                  
+                  <div class="mobile-option">
+                    <input type="radio" class="radio-button" role="radio" aria-checked="false">
+                    <p>MTN Mobile Money</p>
+                  </div>
+                  
+                  <div class="mobile-option">
+                    <input type="radio" class="radio-button" role="radio">
+                    <p>Telecel Mobile Money</p>
+                  </div>
+                  
+                  <div class="mobile-option">
+                    <input type="radio" class="radio-button" role="radio">
+                    <p>AirtelTigo Mobile Money</p>
+                  </div>
+                  
+                  <h3>Pre-pay Now</h3>
+                  
+                  <div class="payment-option">
+                    <input type class="radio-button" role="radio" >
+                    <p>Pay with Card<br><span>Pay Now with No E-levy</span></p>
+                  </div>
+                  
+                </div>
+                <a href="payement-mobile.html">
+                  <button class="checkout-button">Proceed to checkout</button>
+                </a>
               </section>
             </div>
-            
-            <aside class="order-column">
-              <div class="order-summary">
+          </div>  
+            <aside class="order-summary">
+              <div class="summary-section">
                 <div class="summary-header">
-                  <h3>My Order Summary</h3>
-                  <button>Edit</button>
+                  <h2 class="summary-title">My Order Summary</h2>
+                  <button class="edit-button">Edit</button>
                 </div>
-                
-                <div class="product-item">
-                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a3d2d15b23f08d6a7e4a2e6a232f16067819ffa196f0281f853b8b8b5396d9b4?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="product-image" alt="Product 1"/>
-                  <div class="product-details">
-                    <h4 class="product-name">Lorem ipsum dolor</h4>
-                    <p class="product-quantity">Qty: 1</p>
-                    <p class="product-price">$50.00</p>
-                  </div>
+        
+                <ul class="product-list">
+                  <li class="product-item">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a3d2d15b23f08d6a7e4a2e6a232f16067819ffa196f0281f853b8b8b5396d9b4?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Product 1" class="product-image" />
+                    <div class="product-details">
+                      <h3 class="product-name">Lorem ipsum dolor</h3>
+                      <p class="product-quantity">Qty: 1</p>
+                      <p class="product-price">$50.00</p>
+                    </div>
+                  </li>
+                  <li class="product-item">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9d8eab4fe28a73835d78dacacb812768449843e65448f1aa79482ad7a0d5e41?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Product 2" class="product-image" />
+                    <div class="product-details">
+                      <h3 class="product-name">Lorem ipsum dolor</h3>
+                      <p class="product-quantity">Qty: 1</p>
+                      <p class="product-price">$99.99</p>
+                    </div>
+                  </li>
+                  <li class="product-item">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4dec0a85ae305f77f0be2bbd7994f06e59650e4d5ff4602c193c0386f8e57c48?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Product 3" class="product-image" />
+                    <div class="product-details">
+                      <h3 class="product-name">Lorem ipsum dolor</h3>
+                      <p class="product-quantity">Qty: 1</p>
+                      <p class="product-price">$99.99</p>
+                    </div>
+                  </li>
+                  <li class="product-item">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4dec0a85ae305f77f0be2bbd7994f06e59650e4d5ff4602c193c0386f8e57c48?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" alt="Product 3" class="product-image" />
+                    <div class="product-details">
+                      <h3 class="product-name">Lorem ipsum dolor</h3>
+                      <p class="product-quantity">Qty: 1</p>
+                      <p class="product-price">$99.99</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        
+              <div class="total-section">
+                <div class="total-row">
+                  <span>Cart Summary</span>
+                  <span>$349.99</span>
                 </div>
-                
-                <div class="item-divider"></div>
-                
-                <div class="product-item">
-                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a9d8eab4fe28a73835d78dacacb812768449843e65448f1aa79482ad7a0d5e41?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="product-image" alt="Product 2"/>
-                  <div class="product-details">
-                    <h4 class="product-name">Lorem ipsum dolor</h4>
-                    <p class="product-quantity">Qty: 1</p>
-                    <p class="product-price">$99.99</p>
-                  </div>
+                <div class="total-row">
+                  <span>Shipping</span>
+                  <span>$5.00</span>
                 </div>
-                
-                <div class="item-divider"></div>
-                
-                <div class="product-item">
-                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4dec0a85ae305f77f0be2bbd7994f06e59650e4d5ff4602c193c0386f8e57c48?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="product-image" alt="Product 3"/>
-                  <div class="product-details">
-                    <h4 class="product-name">Lorem ipsum dolor</h4>
-                    <p class="product-quantity">Qty: 1</p>
-                    <p class="product-price">$99.99</p>
-                  </div>
+                <div class="total-row total-final">
+                  <span>Total</span>
+                  <span>$354.99</span>
                 </div>
               </div>
             </aside>
           </div>
-          
-          <div class="payment-options">
-            <div class="options-grid">
-              <div class="payment-column">
-                <div class="payment-option">
-                  <div class="radio-button" role="radio" aria-checked="false"></div>
-                  <p class="option-label">Pay on Delivery<br><span>Pay Mobile Money or in cash on Delivery/Pickup</span></p>
-                </div>
-                
-                <h3 class="mobile-money-section">Mobile Money</h3>
-                
-                <div class="mobile-option">
-                  <div class="radio-button" role="radio" aria-checked="false"></div>
-                  <p>MTN Mobile Money</p>
-                </div>
-                
-                <div class="mobile-option">
-                  <div class="radio-button" role="radio" aria-checked="false"></div>
-                  <p>Telecel Mobile Money</p>
-                </div>
-                
-                <div class="mobile-option">
-                  <div class="radio-button" role="radio" aria-checked="false"></div>
-                  <p>AirtelTigo Mobile Money</p>
-                </div>
-                
-                <h3>Pre-pay Now</h3>
-                
-                <div class="payment-option">
-                  <div class="radio-button" role="radio" aria-checked="false"></div>
-                  <p>Pay with Card<br><span>Pay Now with No E-levy</span></p>
-                </div>
-              </div>
-              
-              <div class="order-column">
-                <div class="order-summary">
-                  <div class="summary-header">
-                    <div>
-                      <h3>Cart Summary</h3>
-                      <p>Shipping</p>
-                      <p class="total">Total</p>
-                    </div>
-                    <div>
-                      <p>$349.99</p>
-                      <p>$5.00</p>
-                      <p>$354.99</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <button class="checkout-button">Proceed to checkout</button>
         </main>
       </div>
       
       <footer class="footer">
         <div class="footer-content">
-          <div class="footer-grid">
-            <div class="footer-logo">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/14337a3bc9ce6f3064aae76392d3b0f701480105855e134a69e4b1d708968d96?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="logo" alt="Footer Logo"/>
+          <div class="footer-sections">
+            <div class="footer-logo-social">
+              <img src="imgs/Logo (1).png" alt="YannsTechHub Footer Logo" class="logo" />
               <div class="social-icons">
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/e4e6c71b5500d63b74c3937dba786fe60e6af53bf2248f1ba7904ce7ceb5a214?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="social-icon" alt="Facebook"/>
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f40816b46499d250d4225f62a3ee7f1136149c95228d96495d89a44fd07e30f2?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="social-icon" alt="Twitter"/>
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/63e94aab1c641e4487dbd9e440c025fb74da667b8921c0467643f1447b281ffb?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="social-icon" alt="Instagram"/>
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4e7481c8793977677f152529b654a02cb36be78ef8aafdeb1f14777818c39ad0?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="social-icon" alt="LinkedIn"/>
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/aac656be81d660e7d6cca7bdfb5c5461e46594bc7f0226c4853fe56cdf8a221d?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="social-icon" alt="YouTube"/>
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/157e8cb4f49f13aad45a2914dc10f3a7a6bbf237006db244150b722669730d32?placeholderIfAbsent=true&apiKey=2c9d54f744c4489ca7176332d686675c" class="social-icon" alt="Pinterest"/>
+                <a href="#" aria-label="Facebook">
+                  <img src="imgs/Facebook.png" alt="" class="social-icon" />
+                </a>
+                <a href="#" aria-label="Twitter">
+                  <img src="imgs/Twitter.png" alt="" class="social-icon" />
+                </a>
+                <a href="#" aria-label="Instagram">
+                  <img src="imgs/Instagram.png" alt="" class="social-icon" />
+                </a>
+                <a href="#" aria-label="LinkedIn">
+                  <img src="imgs/LinkedIn.png" alt="" class="social-icon" />
+                </a>
+                <a href="#" aria-label="YouTube">
+                  <img src="imgs/YouTube.png" alt="" class="social-icon" />
+                </a>
+                <a href="#" aria-label="TickTok">
+                  <img src="imgs/TikTok.png" alt="" class="social-icon" />
+                </a>
               </div>
             </div>
-            
             <div class="footer-links">
-              <h4 class="footer-heading">Company</h4>
-              <a href="#" class="footer-link">About Us</a>
-              <a href="#" class="footer-link">Careers</a>
+              <h3 class="footer-heading">Company</h3>
+              <a href="#about" class="footer-link">About Us</a>
+              <a href="#careers" class="footer-link">Careers</a>
             </div>
-            
             <div class="footer-links">
-              <h4 class="footer-heading">Help</h4>
-              <a href="#" class="footer-link">Legal</a>
-              <a href="#" class="footer-link">FAQs</a>
-              <a href="#" class="footer-link">Contact</a>
+              <h3 class="footer-heading">Help</h3>
+              <a href="#legal" class="footer-link">Legal</a>
+              <a href="#faqs" class="footer-link">FAQs</a>
+              <a href="#contact" class="footer-link">Contact</a>
             </div>
           </div>
         </div>
-        
         <div class="copyright">@yannstechhub2025</div>
       </footer>
     </div>

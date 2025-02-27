@@ -472,21 +472,53 @@
         padding: 19px 20px;
       }
     }
+    .slider-container {
+      position: relative;
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+    }
 
     .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
-    overflow: hidden;
+      display: flex;
     gap: 20px;
     margin-top: 20px;
     width: 100%;
+    transition: transform 0.5s ease;
     /* max-width: 70%; */
   }
 
   @media (max-width: 991px) {
   .products-grid {
-    width: 70%;
+    width: 80%;
 }
+
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 50;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.arrow:focus {
+  outline: none;
+}
+.arrow-left {
+  left: 10px;
+}
+.arrow-right {
+  right: 10px;
 }
   
   .product-card {
@@ -496,6 +528,7 @@
     border: 1px solid #e4e4e4;
     display: flex;
     flex-direction: column;
+    width: 244px;
   }
   
   .product-image-container {
@@ -575,7 +608,7 @@
     background-color: #000;
     padding-top: 10px;
     width: 100%;
-    margin-bottom: 0%;
+    margin-top: auto;
   }
   
   .footer-content {
@@ -679,17 +712,23 @@
 <section class="daily-deals-container">
   <div class="main-content">
     <header class="header-section">
-      <img src="imgs/Logo.png" alt="YannsTechHub Logo" class="logo" />
+      <a href="index.html">
+        <img src="imgs/Logo.png" alt="YannsTechHub Logo" class="logo" />
+      </a>
       <nav class="nav-buttons">
         <a href="daily-deals-section.html" class="nav-link">Daily deals</a>
         <a href="shop-section.html" class="nav-link">Shop</a>
         <a href="bundle-deals.html" class="nav-link">Bundle Deals</a>
-        <a href="#support" class="nav-link">Support</a>
+        <a href="support" class="nav-link">Support</a>
       </nav>
       <div class="user-actions">
         <img src="imgs/Search - 7.png" alt="Search" class="action-icon" />
-        <img src="imgs/Profile - 3.png" alt="User Account" class="action-icon" />
-        <img src="imgs/Buy - 6 (1).png" alt="Shopping Cart" class="action-icon" />
+        <a href="logIn.html">
+          <img src="imgs/Profile - 3.png" alt="User Account" class="action-icon" />
+        </a>
+        <a href="cart.html">
+          <img src="imgs/Buy - 6 (1).png" alt="Shopping Cart" class="action-icon" />
+        </a>
       </div>
     </header>
 
@@ -903,84 +942,148 @@
       <!-- Additional review cards follow same structure -->
     
       <h2 class="section-title">You May Also Like</h2>
-      <div class="products-grid">  
-      <article class="product-card">
-        <div class="product-image-container">
-          <img src="imgs/Rectangle 62.png" alt="Product 1" class="product-image" />
-          <img src="imgs/favorie 1.png" alt="Add to wishlist" class="wishlist-icon" />
-        </div>
-        <h2 class="product-title">Lorem ipsum dolor</h2>
-        <div class="product-details">
-          <div class="rating-price">
-            <div class="rating">
-              <img src="imgs/star 1.png" class="rating-icon" />
-              <span>5.0 (58 reviews)</span>
+      <div class="slider-container">
+        <!-- Left Arrow -->
+    <button class="arrow arrow-left">&#10094;</button>
+
+        <div class="products-grid">  
+          <article class="product-card">
+            <div class="product-image-container">
+              <img src="imgs/Rectangle 62.png" alt="Product 1" class="product-image" />
+              <img src="imgs/favorie 1.png" alt="Add to wishlist" class="wishlist-icon" />
             </div>
-            <span class="price">$ 50.00</span>
-          </div>
-          <button class="cart-button" aria-label="Add to cart">
-            <img src="imgs/Buy - 6.png" alt="" class="cart-icon">
-          </button>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-image-container">
-          <img src="imgs/Rectangle 62.png" alt="Product 1" class="product-image" />
-          <img src="imgs/favorie 1.png" alt="Add to wishlist" class="wishlist-icon" />
-        </div>
-        <h2 class="product-title">Lorem ipsum dolor</h2>
-        <div class="product-details">
-          <div class="rating-price">
-            <div class="rating">
-              <img src="imgs/star 1.png" class="rating-icon" />
-              <span>5.0 (58 reviews)</span>
+            <h2 class="product-title">Lorem ipsum dolor</h2>
+            <div class="product-details">
+              <div class="rating-price">
+                <div class="rating">
+                  <img src="imgs/star 1.png" class="rating-icon" />
+                  <span>5.0 (58 reviews)</span>
+                </div>
+                <span class="price">$ 50.00</span>
+              </div>
+              <button class="cart-button" aria-label="Add to cart">
+                <img src="imgs/Buy - 6.png" alt="" class="cart-icon">
+              </button>
             </div>
-            <span class="price">$ 50.00</span>
-          </div>
-          <button class="cart-button" aria-label="Add to cart">
-            <img src="imgs/Buy - 6.png" alt="" class="cart-icon">
-          </button>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-image-container">
-          <img src="imgs/Rectangle 62.png" alt="Product 1" class="product-image" />
-          <img src="imgs/favorie 1.png" alt="Add to wishlist" class="wishlist-icon" />
-        </div>
-        <h2 class="product-title">Lorem ipsum dolor</h2>
-        <div class="product-details">
-          <div class="rating-price">
-            <div class="rating">
-              <img src="imgs/star 1.png" class="rating-icon" />
-              <span>5.0 (58 reviews)</span>
+          </article>
+          <article class="product-card">
+            <div class="product-image-container">
+              <img src="imgs/Rectangle 62.png" alt="Product 1" class="product-image" />
+              <img src="imgs/favorie 1.png" alt="Add to wishlist" class="wishlist-icon" />
             </div>
-            <span class="price">$ 50.00</span>
-          </div>
-          <button class="cart-button" aria-label="Add to cart">
-            <img src="imgs/Buy - 6.png" alt="" class="cart-icon">
-          </button>
-        </div>
-      </article>
-      <article class="product-card">
-        <div class="product-image-container">
-          <img src="imgs/Rectangle 62.png" alt="Product 1" class="product-image" />
-          <img src="imgs/favorie 1.png" alt="Add to wishlist" class="wishlist-icon" />
-        </div>
-        <h2 class="product-title">Lorem ipsum dolor</h2>
-        <div class="product-details">
-          <div class="rating-price">
-            <div class="rating">
-              <img src="imgs/star 1.png" class="rating-icon" />
-              <span>5.0 (58 reviews)</span>
+            <h2 class="product-title">Lorem ipsum dolor</h2>
+            <div class="product-details">
+              <div class="rating-price">
+                <div class="rating">
+                  <img src="imgs/star 1.png" class="rating-icon" />
+                  <span>5.0 (58 reviews)</span>
+                </div>
+                <span class="price">$ 50.00</span>
+              </div>
+              <button class="cart-button" aria-label="Add to cart">
+                <img src="imgs/Buy - 6.png" alt="" class="cart-icon">
+              </button>
             </div>
-            <span class="price">$ 50.00</span>
-          </div>
-          <button class="cart-button" aria-label="Add to cart">
-            <img src="imgs/Buy - 6.png" alt="" class="cart-icon">
-          </button>
+          </article>
+          <article class="product-card">
+            <div class="product-image-container">
+              <img src="imgs/Rectangle 62.png" alt="Product 1" class="product-image" />
+              <img src="imgs/favorie 1.png" alt="Add to wishlist" class="wishlist-icon" />
+            </div>
+            <h2 class="product-title">Lorem ipsum dolor</h2>
+            <div class="product-details">
+              <div class="rating-price">
+                <div class="rating">
+                  <img src="imgs/star 1.png" class="rating-icon" />
+                  <span>5.0 (58 reviews)</span>
+                </div>
+                <span class="price">$ 50.00</span>
+              </div>
+              <button class="cart-button" aria-label="Add to cart">
+                <img src="imgs/Buy - 6.png" alt="" class="cart-icon">
+              </button>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image-container">
+              <img src="imgs/Rectangle 62.png" alt="Product 1" class="product-image" />
+              <img src="imgs/favorie 1.png" alt="Add to wishlist" class="wishlist-icon" />
+            </div>
+            <h2 class="product-title">Lorem ipsum dolor</h2>
+            <div class="product-details">
+              <div class="rating-price">
+                <div class="rating">
+                  <img src="imgs/star 1.png" class="rating-icon" />
+                  <span>5.0 (58 reviews)</span>
+                </div>
+                <span class="price">$ 50.00</span>
+              </div>
+              <button class="cart-button" aria-label="Add to cart">
+                <img src="imgs/Buy - 6.png" alt="" class="cart-icon">
+              </button>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image-container">
+              <img src="imgs/Rectangle 62.png" alt="Product 1" class="product-image" />
+              <img src="imgs/favorie 1.png" alt="Add to wishlist" class="wishlist-icon" />
+            </div>
+            <h2 class="product-title">Lorem ipsum dolor</h2>
+            <div class="product-details">
+              <div class="rating-price">
+                <div class="rating">
+                  <img src="imgs/star 1.png" class="rating-icon" />
+                  <span>5.0 (58 reviews)</span>
+                </div>
+                <span class="price">$ 50.00</span>
+              </div>
+              <button class="cart-button" aria-label="Add to cart">
+                <img src="imgs/Buy - 6.png" alt="" class="cart-icon">
+              </button>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image-container">
+              <img src="imgs/Rectangle 62.png" alt="Product 1" class="product-image" />
+              <img src="imgs/favorie 1.png" alt="Add to wishlist" class="wishlist-icon" />
+            </div>
+            <h2 class="product-title">Lorem ipsum dolor</h2>
+            <div class="product-details">
+              <div class="rating-price">
+                <div class="rating">
+                  <img src="imgs/star 1.png" class="rating-icon" />
+                  <span>5.0 (58 reviews)</span>
+                </div>
+                <span class="price">$ 50.00</span>
+              </div>
+              <button class="cart-button" aria-label="Add to cart">
+                <img src="imgs/Buy - 6.png" alt="" class="cart-icon">
+              </button>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-image-container">
+              <img src="imgs/Rectangle 62.png" alt="Product 1" class="product-image" />
+              <img src="imgs/favorie 1.png" alt="Add to wishlist" class="wishlist-icon" />
+            </div>
+            <h2 class="product-title">Lorem ipsum dolor</h2>
+            <div class="product-details">
+              <div class="rating-price">
+                <div class="rating">
+                  <img src="imgs/star 1.png" class="rating-icon" />
+                  <span>5.0 (58 reviews)</span>
+                </div>
+                <span class="price">$ 50.00</span>
+              </div>
+              <button class="cart-button" aria-label="Add to cart">
+                <img src="imgs/Buy - 6.png" alt="" class="cart-icon">
+              </button>
+            </div>
+          </article>
+         </div> 
+         <!-- Right Arrow -->
+         <button class="arrow arrow-right">&#10095;</button>
         </div>
-      </article>
-     </div> 
       </div>
     </div>
   </div>
@@ -1013,14 +1116,14 @@
         </div>
         <div class="footer-links">
           <h3 class="footer-heading">Company</h3>
-          <a href="#about" class="footer-link">About Us</a>
-          <a href="#careers" class="footer-link">Careers</a>
+          <a href="about-us.html" class="footer-link">About Us</a>
+          <a href="careers.html" class="footer-link">Careers</a>
         </div>
         <div class="footer-links">
           <h3 class="footer-heading">Help</h3>
-          <a href="#legal" class="footer-link">Legal</a>
-          <a href="#faqs" class="footer-link">FAQs</a>
-          <a href="#contact" class="footer-link">Contact</a>
+          <a href="legal.html" class="footer-link">Legal</a>
+          <a href="faqs.html" class="footer-link">FAQs</a>
+          <a href="contact.html" class="footer-link">Contact</a>
         </div>
       </div>
     </div>
@@ -1028,3 +1131,75 @@
   </footer>
 
 </section>  
+
+<script>
+  // Get DOM elements
+  const track = document.querySelector('.products-grid');
+  const btnNext = document.querySelector('.arrow-right');
+  const btnPrev = document.querySelector('.arrow-left');
+  const cards = document.querySelectorAll('.product-card');
+  const container = document.querySelector('.slider-container');
+
+  let currentIndex = 0;
+  // Calculate the effective width of each card (card width + gap)
+  // Note: The gap is defined in CSS as 20px.
+  let cardWidth = cards[0].offsetWidth + 20;
+  let visibleCount = Math.floor(container.offsetWidth / cardWidth);
+
+  // Function to update slider position
+  function updateSlider() {
+    // Update cardWidth and visibleCount on window resize
+    cardWidth = cards[0].offsetWidth + 20;
+    visibleCount = Math.floor(container.offsetWidth / cardWidth);
+    
+    // Calculate maximum index so that we never slide past the last card
+    const maxIndex = Math.max(0, cards.length - visibleCount);
+    if (currentIndex > maxIndex) {
+      currentIndex = maxIndex;
+    }
+    
+    // Move the slider track
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+
+  // Next arrow click event
+  btnNext.addEventListener('click', () => {
+    const maxIndex = Math.max(0, cards.length - visibleCount);
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+    } else {
+      // Loop back to the beginning when reaching the end
+      currentIndex = 0;
+    }
+    updateSlider();
+  });
+
+  // Previous arrow click event
+  btnPrev.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      // Loop to the end when on the first card
+      currentIndex = Math.max(0, cards.length - visibleCount);
+    }
+    updateSlider();
+  });
+
+  // Auto-rotate function
+  function autoRotate() {
+    const maxIndex = Math.max(0, cards.length - visibleCount);
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+    } else {
+      // When reaching the end, start from the beginning
+      currentIndex = 0;
+    }
+    updateSlider();
+  }
+
+  // Set interval for auto-rotation (e.g., every 3 seconds)
+  let autoRotateInterval = setInterval(autoRotate, 3000);
+
+  // Update slider when the window is resized
+  window.addEventListener('resize', updateSlider);
+</script>

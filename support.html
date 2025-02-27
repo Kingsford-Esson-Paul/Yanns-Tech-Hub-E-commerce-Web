@@ -1,6 +1,9 @@
 <style>
     .track-order {
-  background-color: #fff;
+      background-color: #eef2f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
 }
 
 .main-content {
@@ -159,10 +162,12 @@
     }
     }
 
-.order-section {
+  .order-section {
   text-align: center;
   margin-top: 50px;
   display: flex;
+  width: 100%;
+  max-width: 80%;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -171,38 +176,42 @@
 @media (max-width: 991px) {
      .order-section {
       margin-top: 80px;
+      max-width: 100%;
     }
     }
 .section-title {
   font-size: 25px;
   font-weight: 700;
+  width: 50%;
   margin-bottom: 13px;
 }
 
 .order-image {
   aspect-ratio: 3.13;
   width: 100%;
-  max-width: 998px;
+  max-width: 90%;
   margin-bottom: 26px;
 }
 .order-form {
-  align-self: center;
+    align-self: center;
     background-color: #fff;
-    align-self: stretch;
+    /* align-self: stretch; */
     display: flex;
+    flex: 1;
     width: 50%;
     margin-top: -60px;
-    align-items: end;
+    /* align-items: end; */
     font-size: 15px;
     color: #000;
     white-space: nowrap;
-  }
+}
   .order-number{
     align-self: stretch;
     padding: 0 10px;
-    width: 542px;
+    width: 100%;
     display: flex;
     border: none;
+    outline: none;
     font-size: 15px;
     color: #000;
     white-space: nowrap;
@@ -258,7 +267,7 @@
     background-color: #000;
     padding-top: 10px;
     width: 100%;
-    margin-bottom: 0%;
+    margin-top: auto;
   }
   
   .footer-content {
@@ -267,14 +276,14 @@
     justify-content: center;
   }
   
-  .footer-sections {
-    display: flex;
-    flex-direction: row;
-    width: 655px;
-    max-width: 100%;
-    gap: 20px;
-    justify-content: space-between;
-  }
+.footer-sections {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 50%;
+  gap: 20px;
+  justify-content: space-between;
+}
 
   .footer-logo-social {
     display: flex;
@@ -347,6 +356,7 @@
       align-items: start;
       text-align: start;
       gap: 5rem;
+      max-width: 60%;
       justify-content: center;
     }
   
